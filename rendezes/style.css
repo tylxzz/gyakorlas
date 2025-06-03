@@ -1,0 +1,133 @@
+/* Alap háttér és betű */
+body {
+    background: linear-gradient(135deg, #232526 0%, #414345 100%);
+    color: #f0f0f0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+/* Konténer középre igazítása */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: rgba(34, 34, 34, 0.95);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    padding: 32px 40px 40px 40px;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Táblázat stílus */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 24px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+th, td {
+    padding: 14px 18px;
+    text-align: left;
+}
+
+th {
+    background: rgba(0,0,0,0.18);
+    color: #ffeb3b;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #ffeb3b;
+}
+
+tr:nth-child(even) {
+    background: rgba(255,255,255,0.06);
+}
+
+tr:hover {
+    background: rgba(255,255,255,0.18);
+    transition: background 0.2s;
+}
+
+/* Összeg színezés */
+.negativ-osszeg {
+    color: #ff5252;
+    font-weight: bold;
+    text-shadow: 0 0 2px #000, 0 0 8px #ff5252;
+}
+
+.pozitiv-osszeg {
+    color: #69f0ae;
+    font-weight: bold;
+    text-shadow: 0 0 2px #000, 0 0 8px #69f0ae;
+}
+
+/* Feltöltés input */
+input[type="file"] {
+    display: block;
+    margin: 24px 0 18px 0;
+    padding: 10px;
+    background: #232526;
+    color: #ffeb3b;
+    border: 2px solid #ffeb3b;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+input[type="file"]:hover {
+    background: #ffeb3b;
+    color: #232526;
+}
+
+/* Lenýíló menük (select) */
+select {
+    padding: 10px 16px;
+    margin-right: 12px;
+    border-radius: 6px;
+    border: 2px solid #ffeb3b;
+    background: #232526;
+    color: #ffeb3b;
+    font-size: 1em;
+    outline: none;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+}
+
+select:focus, select:hover {
+    background: #ffeb3b;
+    color: #232526;
+    border-color: #232526;
+}
+
+/* Gombok */
+button, input[type="submit"] {
+    padding: 10px 24px;
+    border-radius: 6px;
+    border: 2px solid #ffeb3b;
+    background: #232526;
+    color: #ffeb3b;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+    margin-left: 8px;
+}
+
+button:hover, input[type="submit"]:hover {
+    background: #ffeb3b;
+    color: #232526;
+    border-color: #232526;
+}
+
+/* Animációk */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(24px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+.container, table {
+    animation: fadeIn 0.8s cubic-bezier(.4,0,.2,1);
+}
